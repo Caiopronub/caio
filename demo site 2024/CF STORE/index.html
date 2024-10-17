@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CF STORE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mensagem de Boas-Vindas -->
+    <header>
+        <h1>Bem-vindo à CF STORE</h1>
+        <p>SITE E-COMMERCE DEMOSTRATIVO</p>
+        
+    </header>
+
+    <!-- Menu de Categorias -->
+    <nav>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#">Roupas</a>
+                <ul class="submenu">
+                    <li><a href="#">Masculinas</a></li>
+                    <BR></BR>
+                    <li><a href="#">Femininas</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Sapatos</a>
+                <ul class="submenu">
+                    <li><a href="#">Masculinos</a></li>
+                    <BR></BR>
+                    <li><a href="#">Femininos</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Outros</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="product-grid">
+        <h2>Roupas</h2>
+        <!-- Espaço para Banner de Roupas -->
+        <div class="banner">
+            <img src="/IMG/1.png" alt="Banner de Roupas">
+        </div>
+        <div class="products">
+            <div class="product-card">
+                <div class="image-slider">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_612736-MLB69652649374_052023-F.webp" alt="Camiseta Masculina" class="active">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_761393-MLB51220621532_082022-F.webp" alt="Camiseta Masculina" class="inactive">
+                </div>
+                <h3>Camiseta Masculina</h3>
+                <p>Tamanho: M</p>
+                <p>Cor: Azul</p>
+                <p>Frete: Grátis</p>
+                <button class="buy-now" onclick="window.location.href='https://link-exemplo.com'">Comprar Agora</button>
+                <button class="learn-more" onclick="whatsappRedirect('Camiseta Masculina', 'Tamanho: M, Cor: Azul, Frete: Grátis')">Saber Mais</button>
+            </div>
+            <div class="product-card">
+                <div class="image-slider">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_919107-MLB79724708675_102024-F.webp" alt="Vestido Feminino" class="active">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_916023-MLB79724463899_102024-F.webp" alt="Vestido Feminino" class="inactive">
+                </div>
+                <h3>Vestido Feminino</h3>
+                <p>Tamanho: G</p>
+                <p>Cor: Vermelho</p>
+                <p>Frete: R$10,00</p>
+                <button class="buy-now" onclick="window.location.href='https://link-exemplo.com'">Comprar Agora</button>
+                <button class="learn-more" onclick="whatsappRedirect('Vestido Feminino', 'Tamanho: G, Cor: Vermelho, Frete: R$10,00')">Saber Mais</button>
+            </div>
+            <div class="product-card">
+                <div class="image-slider">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_940990-MLB78056421277_072024-F.webp" alt="Calça Jeans Masculina" class="active">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_975443-MLB78056272373_072024-F.webp" alt="Calça Jeans Masculina" class="inactive">
+                </div>
+                <h3>Calça Jeans Masculina</h3>
+                <p>Tamanho: 42</p>
+                <p>Cor: Preto</p>
+                <p>Frete: Grátis</p>
+                <button class="buy-now" onclick="window.location.href='https://link-exemplo.com'">Comprar Agora</button>
+                <button class="learn-more" onclick="whatsappRedirect('Calça Jeans Masculina', 'Tamanho: 42, Cor: Preto, Frete: Grátis')">Saber Mais</button>
+            </div>
+        </div>
+
+        <h2>Sapatos</h2>
+        <!-- Espaço para Banner de Sapatos -->
+        <div class="banner">
+            <img src="/IMG/2.png" alt="Banner de Sapatos">
+        </div>
+        <div class="products">
+            <div class="product-card">
+                <div class="image-slider">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_681568-MLB77549934675_072024-F.webp" alt="Tênis Masculino" class="active">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_683908-MLB77549934683_072024-F.webp" alt="Tênis Masculino" class="inactive">
+                </div>
+                <h3>Tênis Masculino</h3>
+                <p>Tamanho: 42</p>
+                <p>Cor: Branco</p>
+                <p>Frete: Grátis</p>
+                <button class="buy-now" onclick="window.location.href='https://link-exemplo.com'">Comprar Agora</button>
+                <button class="learn-more" onclick="whatsappRedirect('Tênis Masculino', 'Tamanho: 42, Cor: Branco, Frete: Grátis')">Saber Mais</button>
+            </div>
+            <div class="product-card">
+                <div class="image-slider">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_660953-MLB79550175437_092024-F.webp" alt="Sandália Feminina" class="active">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_650827-MLB79549623951_092024-F.webp" alt="Sandália Feminina" class="inactive">
+                </div>
+                <h3>Sandália Feminina</h3>
+                <p>Tamanho: 37</p>
+                <p>Cor: Rosa</p>
+                <p>Frete: R$5,00</p>
+                <button class="buy-now" onclick="window.location.href='https://link-exemplo.com'">Comprar Agora</button>
+                <button class="learn-more" onclick="whatsappRedirect('Sandália Feminina', 'Tamanho: 37, Cor: Rosa, Frete: R$5,00')">Saber Mais</button>
+            </div>
+            <div class="product-card">
+                <div class="image-slider">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_953130-MLB79345379772_092024-F.webp" alt="Bota Masculina" class="active">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_751212-MLB79588583041_092024-F.webp" alt="Bota Masculina" class="inactive">
+                </div>
+                <h3>Bota Masculina</h3>
+                <p>Tamanho: 44</p>
+                <p>Cor: Marrom</p>
+                <p>Frete: Grátis</p>
+                <button class="buy-now" onclick="window.location.href='https://link-exemplo.com'">Comprar Agora</button>
+                <button class="learn-more" onclick="whatsappRedirect('Bota Masculina', 'Tamanho: 44, Cor: Marrom, Frete: Grátis')">Saber Mais</button>
+            </div>
+        </div>
+
+        <h2>Outros</h2>
+        <!-- Espaço para Banner de Outros -->
+        <div class="banner">
+            <img src="/IMG/3.png" alt="Banner de Outros">
+        </div>
+        <div class="products">
+            <div class="product-card">
+                <div class="image-slider">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_878157-MLU74245596427_012024-F.webp" alt="Brinquedo 1" class="active">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_927699-MLU72652937487_112023-F.webp" alt="Brinquedo 1" class="inactive">
+                </div>
+                <h3>Brinquedo de Construção</h3>
+                <p>Idade: 3+</p>
+                <p>Cor: Multicolorido</p>
+                <p>Frete: Grátis</p>
+                <button class="buy-now" onclick="window.location.href='https://link-exemplo.com'">Comprar Agora</button>
+                <button class="learn-more" onclick="whatsappRedirect('Brinquedo de Construção', 'Idade: 3+, Cor: Multicolorido, Frete: Grátis')">Saber Mais</button>
+            </div>
+            <div class="product-card">
+                <div class="image-slider">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_606870-MLU78729770572_092024-F.webp" alt="Kit de Brinquedos" class="active">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_689739-MLU78729534412_092024-F.webp" alt="Kit de Brinquedos" class="inactive">
+                </div>
+                <h3>Kit de Brinquedos Educativos</h3>
+                <p>Idade: 5+</p>
+                <p>Frete: R$15,00</p>
+                <button class="buy-now" onclick="window.location.href='https://link-exemplo.com'">Comprar Agora</button>
+                <button class="learn-more" onclick="whatsappRedirect('Kit de Brinquedos Educativos', 'Idade: 5+, Frete: R$15,00')">Saber Mais</button>
+            </div>
+            <div class="product-card">
+                <div class="image-slider">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_743433-MLB76314281899_052024-F.webp" alt="Roupão de Banho" class="active">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_846275-MLB75637221376_042024-F.webp" alt="Roupão de Banho" class="inactive">
+                </div>
+                <h3>Roupão de Banho</h3>
+                <p>Tamanho: G</p>
+                <p>Cor: Branco</p>
+                <p>Frete: Grátis</p>
+                <button class="buy-now" onclick="window.location.href='https://link-exemplo.com'">Comprar Agora</button>
+                <button class="learn-more" onclick="whatsappRedirect('Roupão de Banho', 'Tamanho: G, Cor: Branco, Frete: Grátis')">Saber Mais</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="safe-site-footer">
+            <img src="https://hecato.com/sistema/blog-hecato/wp-content/uploads/2019/04/site-seguro.jpg" alt="Site Seguro">
+        </div>
+        <div class="contact-info">
+            <p>Contato: <a href="mailto:ckweb.oficial@gmail.com">ckweb.oficial@gmail.com</a></p>
+            <p>Telefone: <a href="tel:+5519996594263">19996594263</a></p>
+        </div>
+        <h4 class="link-final"><p>Desenvolvido Pela <a href="https://ck-web-oficial.netlify.app//">CK WEB</a></p></h4>
+        <h3><p>&copy; 2024 CF STORE - Todos os direitos reservados.</p></h3>
+    </footer>
+
+    <script>
+        function whatsappRedirect(productName, productDetails) {
+            const message = `Olá! Gostaria de saber mais sobre: ${productName}. Detalhes: ${productDetails}`;
+            const whatsappURL = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        function startImageSlider() {
+            const sliders = document.querySelectorAll('.image-slider');
+            sliders.forEach(slider => {
+                const images = slider.querySelectorAll('img');
+                let currentIndex = 0;
+
+                setInterval(() => {
+                    images[currentIndex].classList.remove('active');
+                    images[currentIndex].classList.add('inactive');
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].classList.remove('inactive');
+                    images[currentIndex].classList.add('active');
+                }, 3000); // Troca de imagem a cada 3 segundos
+            });
+        }
+
+        window.onload = startImageSlider;
+    </script>
+</body>
+</html>
