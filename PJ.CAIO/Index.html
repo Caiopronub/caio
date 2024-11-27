@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .login-container {
+      text-align: center;
+      background: #ffffff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .login-container h1 {
+      margin-bottom: 20px;
+    }
+    .login-container input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .login-container button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="Logotipo moderno minimalista azul marinho para ecommerce (80).png" alt="">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Digite seu e-mail" required>
+      <input type="password" id="password" placeholder="Digite sua senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <script>
+    const users = [
+      { email: "caiofelipe@gmail.com", password: "caio2003", role: "admin" },
+      { email: "kauacesar@gmail.com", password: "kaua2004", role: "admin" },
+      { email: "Funcionario@gmail.com", password: "user123", role: "user" },
+    ];
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const user = users.find(u => u.email === email && u.password === password);
+
+      if (user) {
+        if (user.role === "admin") {
+          window.location.href = "admin.html"; // Página do administrador
+        } else {
+          window.open("planilha.html", "_blank"); // Usuário comum
+        }
+      } else {
+        alert("Credenciais inválidas!");
+      }
+    });
+  </script>
+</body>
+</html>

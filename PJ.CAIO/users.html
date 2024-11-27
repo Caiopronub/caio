@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Usuários</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    .user-list {
+      margin: 20px 0;
+      background: #ffffff;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .user-list h2 {
+      margin: 0 0 10px;
+    }
+    .user-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    .user-list ul li {
+      padding: 5px 0;
+      border-bottom: 1px solid #ccc;
+    }
+    .add-user-form input {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .add-user-form button {
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .add-user-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gerenciar Usuários</h1>
+  <div class="user-list">
+    <h2>Usuários Cadastrados</h2>
+    <ul id="userList"></ul>
+  </div>
+  <form class="add-user-form" id="addUserForm">
+    <h2>Adicionar Novo Usuário</h2>
+    <input type="email" id="newEmail" placeholder="E-mail" required>
+    <input type="password" id="newPassword" placeholder="Senha" required>
+    <button type="submit">Adicionar Usuário</button>
+  </form>
+
+  <script>
+    let users = [
+      { email: "admin@example.com", password: "admin123", role: "admin" },
+      { email: "user1@example.com", password: "user123", role: "user" }
+    ];
+
+    function renderUsers() {
+      const userList = document.getElementById("userList");
+      userList.innerHTML = "";
+      users.forEach(user => {
+        const li = document.createElement("li");
+        li.textContent = `${user.email} (${user.role})`;
+        userList.appendChild(li);
+      });
+    }
+
+    document.getElementById("addUserForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("newEmail").value;
+      const password = document.getElementById("newPassword").value;
+
+      users.push({ email, password, role: "user" });
+      renderUsers();
+      alert("Usuário adicionado com sucesso!");
+    });
+
+    renderUsers();
+  </script>
+</body>
+</html>
