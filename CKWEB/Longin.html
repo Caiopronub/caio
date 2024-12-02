@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a567e; /* Fundo azul */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="error" id="error-msg"></div>
+        <input type="text" id="document" placeholder="CNPJ ou CPF" required>
+        <input type="text" id="name" placeholder="Nome" required>
+        <button onclick="login()">Entrar</button>
+    </div>
+
+    <script>
+        // Dados de exemplo
+        const users = [
+            { document: '51673025000197', name: 'MERCEARIA DA DILENE' }, // Usuário 1 (CPF)
+            { document: '', name: 'CK WEB' }, // Usuário 2 (CNPJ)
+            { document: '98765432100', name: 'Maria Oliveira' } // Usuário 3 (CPF)
+        ];
+
+        function login() {
+            const documentInput = document.getElementById('document').value;
+            const nameInput = document.getElementById('name').value;
+            const errorMsg = document.getElementById('error-msg');
+
+            if (!documentInput || !nameInput) {
+                errorMsg.textContent = 'Por favor, preencha todos os campos.';
+                return;
+            }
+
+            // Validação simples do formato CNPJ/CPF
+            const cpfCnpjRegex = /^(?:\d{11}|\d{14})$/;
+            if (!cpfCnpjRegex.test(documentInput)) {
+                errorMsg.textContent = 'O CNPJ ou CPF informado é inválido.';
+                return;
+            }
+
+            // Verificar se o usuário existe
+            const user = users.find(u => u.document === documentInput && u.name === nameInput);
+
+            if (!user) {
+                errorMsg.textContent = 'Usuário ou senha incorretos.';
+                return;
+            }
+
+            // Se tudo estiver correto, redireciona para o index.html
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
